@@ -1,0 +1,26 @@
+easyblock = 'Conda'
+
+name = 'CIRCexplorer2'
+version = '2.3.8'
+
+homepage = 'https://circexplorer2.readthedocs.io/en/latest'
+description = """
+CIRCexplorer2 is a comprehensive and integrative circular RNA analysis toolset.
+It is the successor of CIRCexplorer with plenty of new features to facilitate circular
+RNA identification and characterization.
+"""
+
+toolchain = SYSTEM
+
+channels = ['bioconda']
+
+requirements = '%(namelower)s=%(version)s'
+
+dependencies = [
+  ('miniconda', '2.0', '', True)
+]
+
+sanity_check_paths = {
+    'files': ['bin/fast_circ.py'],
+    'dirs': ['lib', 'include'],
+}
