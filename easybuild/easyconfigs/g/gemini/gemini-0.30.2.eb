@@ -25,6 +25,10 @@ channels = ['bioconda']
 
 requirements = '%(name)s=%(version)s'
 
+builddependencies = [
+    ('Miniconda3', '4.7.10'),
+]
+
 sanity_check_commands = [('gemini', '-h')]
 sanity_check_paths = {
     'files': ['bin/gemini'],
